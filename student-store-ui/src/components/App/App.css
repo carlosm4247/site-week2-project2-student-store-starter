@@ -15,7 +15,18 @@
   flex-direction: column;
 }
 
-.app .Navbar {
+.app .page {
+  flex: 1; 
+  padding-left: 200px; 
   display: flex;
   flex-direction: column;
+}
+
+.app .sidebar {
+  width: 200px;
+  background-color: #2C4047;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: solid 1px white;
 }

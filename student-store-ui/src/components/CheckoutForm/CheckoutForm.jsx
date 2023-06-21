@@ -3,7 +3,7 @@ import "./CheckoutForm.css"
 
 export default function CheckoutForm() {
   return (
-    <div className="checkoutform">
+    <div className="checkoutForm">
         <p>Checkout Form</p>
     </div>
   )

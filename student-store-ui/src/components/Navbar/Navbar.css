@@ -1,11 +1,10 @@
 .navbar {
-    display: flex;
-    flex-wrap: wrap;
-    background: #2C4047;
-    align-items: center;
-    border: solid 2px #2C4047;
-    padding: 0.5rem 1rem;
-    gap: 3px;
-    justify-content: space-between;
-  }
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  background: #2C4047;
+  padding: 0.5rem 1rem;
+  justify-content: space-between; 
+}
 
