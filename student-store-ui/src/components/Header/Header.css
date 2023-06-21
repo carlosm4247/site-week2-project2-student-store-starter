@@ -1,0 +1,7 @@
+.header span {
+    margin: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    max-width: 800px;
+}
