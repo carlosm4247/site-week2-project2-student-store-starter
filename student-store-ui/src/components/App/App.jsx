@@ -25,7 +25,11 @@ export default function App() {
               <Navbar />
             </div>
 
-            <Hero />
+            <div className="hero">
+              <Hero />
+            </div>
+
+            
 
             <SearchForm />
 

@@ -30,3 +30,11 @@
   left: 0;
   border-right: solid 1px white;
 }
+
+
+.app .page .hero {
+  width: 75%;
+  background-color: #03C385;
+  position: relative;
+  align-self: center;
+}
