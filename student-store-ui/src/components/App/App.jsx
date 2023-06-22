@@ -3,7 +3,10 @@ import { BrowserRouter } from 'react-router-dom'
 import Navbar from "../Navbar/Navbar"
 import Sidebar from "../Sidebar/Sidebar"
 import Home from "../Home/Home"
+import Hero from "../Hero/Hero"
 import "./App.css"
+import SearchForm from "../SearchForm/SearchForm"
+
 
 export default function App() {
   
@@ -21,6 +24,10 @@ export default function App() {
             <div className="navbar">
               <Navbar />
             </div>
+
+            <Hero />
+
+            <SearchForm />
 
             <Home />
           </div>
