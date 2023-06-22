@@ -1,10 +1,14 @@
 import * as React from "react"
 import "./ProductCard.css"
 
-export default function ProductCard() {
+export default function ProductCard({image, name, price}) {
   return (
     <div className="productCard">
-        <p>Product Card</p>
+        <img src={image} alt={name + " image"}></img>
+
+        <div>{name}</div>
+
+        <div>${price}</div>
     </div>
-  )
+  ) 
 }

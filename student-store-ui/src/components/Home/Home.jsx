@@ -9,13 +9,12 @@ export default function Home() {
   return (
     <div className="home">
       <Categories />
-
+      
       <ProductGrid />
-
+      
       <About />
 
       <Footer />
-
     </div>
   )
 }
