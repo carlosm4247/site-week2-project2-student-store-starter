@@ -8,13 +8,16 @@ import SearchForm from "../SearchForm/SearchForm";
 
 
 
-export default function Home({currentItems, setCurrentItems, searchTerm, setSearchTerm}) {
+export default function Home({currentItems, currentCategory, categoryClicked}) {
   
   
   return (
     <div className="home">
 
-      <Categories />
+      <Categories 
+        currentCategory={currentCategory}
+        categoryClicked={categoryClicked}
+      />
       
       <ProductGrid 
         currentItems={currentItems}

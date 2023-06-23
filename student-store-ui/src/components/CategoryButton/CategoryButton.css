@@ -1,0 +1,23 @@
+.category {
+    padding: 0rem 1rem;
+    margin: 20px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: transparent;
+    border: transparent;
+    color: black;
+    will-change: transform;
+    transition: transform 0.2s ease;
+  }
+  .category:active {
+    transform: translateY(1px);
+  }
+  .category.active {
+    border-bottom: solid 2px #03C385;
+  }
+  .category .label {
+    font-size: 18px;
+  }

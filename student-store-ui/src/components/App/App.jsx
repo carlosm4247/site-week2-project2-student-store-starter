@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Routes } from 'react-router-dom';
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
 import Home from "../Home/Home";
@@ -15,20 +15,34 @@ export default function App() {
   const [searchString, setSearchString] = useState("");
   const [homeItems, setHomeItems] = useState([])
   const [currentItems, setCurrentItems] = useState([]);
+  const [currentCategory, setCurrentCategory] = useState("");
+  const [currentProduct, setCurrentProduct] = useState("");
 
   function runSearchButton() {
     console.log(`Running search for ${searchString}`);
-    const items = data.products.filter(item => item.name.includes(searchString))
+    const items = data.products.filter(item => item.name.toLowerCase().includes(searchString.toLowerCase()))
     setCurrentItems(items)
+  }
+
+  function categoryClicked(category) {
+    console.log(category)
+    if (category === "All Categories") {
+      setCurrentItems(homeItems);
+    }
+    else {
+      const items = data.products.filter(item => item.category.toLowerCase() === category.toLowerCase())
+      setCurrentItems(items)
+    }
+    
+    setCurrentCategory(category);
   }
 
   useEffect(() => {
     const items = data.products;
     setCurrentItems(items);
     setHomeItems(items);
+    setCurrentCategory("All Categories");
   }, []);
-
-
 
 
   return (
@@ -60,9 +74,9 @@ export default function App() {
 
             <Home 
               currentItems={currentItems}
-              setCurrentItems={setCurrentItems}
-              searchTerm={searchString}
-              setSearchString={setSearchString}
+              currentCategory={currentCategory}
+              setCurrentCategory={setCurrentCategory}
+              categoryClicked={categoryClicked}
               />
           </div>
           
