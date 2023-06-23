@@ -38,3 +38,9 @@
   position: relative;
   align-self: center;
 }
+
+.app .page .search {
+  width: 75%;
+  display: flex;
+  align-self: center;
+}

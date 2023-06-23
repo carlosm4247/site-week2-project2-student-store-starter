@@ -3,16 +3,16 @@ import "./ProductGrid.css"
 import { Dataset } from "../../../../student-store-express-api/data/dataset"
 import ProductCard from "../ProductCard/ProductCard"
 
-export default function ProductGrid() {
+export default function ProductGrid({currentItems}) {
 
   const data = Dataset.createDataSet();
 
-  console.log(data.products);
+  console.log(currentItems);
 
   return (
     <div className="productGrid">
       {
-        data.products.map( (item) => {
+        currentItems.map( (item) => {
           return <ProductCard 
             key = {item.id}
             image = {item.image}
