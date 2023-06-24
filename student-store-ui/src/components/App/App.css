@@ -33,14 +33,10 @@
 
 
 .app .page .hero {
-  width: 75%;
+  width: 100%;
   background-color: #03C385;
   position: relative;
   align-self: center;
 }
 
-.app .page .search {
-  width: 75%;
-  display: flex;
-  align-self: center;
-}
+

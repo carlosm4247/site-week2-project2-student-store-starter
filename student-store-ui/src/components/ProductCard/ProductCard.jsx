@@ -11,9 +11,9 @@ export default function ProductCard({id, image, name, price}) {
         </Link>
         
 
-        <div>{name}</div>
+        <div className="productName">{name}</div>
 
-        <div>${price}</div>
+        <div className="productPrice">${price}</div>
     </div>
   ) 
 }

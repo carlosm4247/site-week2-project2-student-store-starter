@@ -1,13 +1,21 @@
 .productCard {
     display: flex;
     flex-direction: column;
-    border: solid 0.5px black;
-    
-    
+    border: solid 1px black;
 }
 
 img {
     align-self: center;
     width: 240px;
     height: 240px;
+}
+
+.productCard .productName {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+.productCard .productPrice {
+    font-size: 18px;
+    color: green;
 }

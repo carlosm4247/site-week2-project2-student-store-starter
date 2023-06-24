@@ -65,20 +65,15 @@ export default function App() {
               <Hero />
             </div>
 
-            <div className="search">
-              <SearchForm 
-                searchString={searchString}
-                setSearchString={setSearchString}
-                runSearch={runSearchButton}
-                />
-            </div>
-
             <Routes>
               <Route path='/' element={<Home 
                                         currentItems={currentItems}
                                         currentCategory={currentCategory}
                                         setCurrentCategory={setCurrentCategory}
                                         categoryClicked={categoryClicked}
+                                        searchString={searchString}
+                                        setSearchString={setSearchString}
+                                        runSearchButton={runSearchButton}
                                       />}
                 />
 

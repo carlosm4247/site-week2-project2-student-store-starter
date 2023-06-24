@@ -7,6 +7,10 @@
     align-items: center;
 }
 
+.hero .text {
+    width: 75%;
+}
+
 .hero h1 {
     margin: 0px;
     font-size: 60px;
@@ -17,8 +21,8 @@
 }
 
 .hero .emoji img {
-    width: 500%;
-    height: auto;
+    height: 150px;
+    width: auto;
 }
 
 
