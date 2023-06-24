@@ -18,6 +18,8 @@ export default function Home({currentItems, currentCategory, categoryClicked}) {
         currentCategory={currentCategory}
         categoryClicked={categoryClicked}
       />
+
+      <h2>Best Selling Products</h2>
       
       <ProductGrid 
         currentItems={currentItems}

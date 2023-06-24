@@ -7,20 +7,21 @@ export default function ProductGrid({currentItems}) {
 
   const data = Dataset.createDataSet();
 
-  console.log(currentItems);
-
   return (
     <div className="productGrid">
-      {
-        currentItems.map( (item) => {
-          return <ProductCard 
-            key = {item.id}
-            image = {item.image}
-            name = {item.name}
-            price = {item.price}
-            />
-        })
-      }
+      {currentItems.length > 0 ? (
+        currentItems.map((item) => (
+          <ProductCard
+            key={item.id}
+            id={item.id}
+            image={item.image}
+            name={item.name}
+            price={item.price}
+          />
+        ))
+      ) : (
+        <div>No items found.</div>
+      )}
     </div>
   )
 }

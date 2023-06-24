@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
 import Home from "../Home/Home";
 import Hero from "../Hero/Hero";
 import "./App.css";
 import SearchForm from "../SearchForm/SearchForm";
+import ProductView from "../ProductView/ProductView"
 import { Dataset } from "../../../../student-store-express-api/data/dataset"
 
 
@@ -16,12 +17,12 @@ export default function App() {
   const [homeItems, setHomeItems] = useState([])
   const [currentItems, setCurrentItems] = useState([]);
   const [currentCategory, setCurrentCategory] = useState("");
-  const [currentProduct, setCurrentProduct] = useState("");
 
   function runSearchButton() {
     console.log(`Running search for ${searchString}`);
     const items = data.products.filter(item => item.name.toLowerCase().includes(searchString.toLowerCase()))
     setCurrentItems(items)
+    setSearchString("");
   }
 
   function categoryClicked(category) {
@@ -72,12 +73,22 @@ export default function App() {
                 />
             </div>
 
-            <Home 
-              currentItems={currentItems}
-              currentCategory={currentCategory}
-              setCurrentCategory={setCurrentCategory}
-              categoryClicked={categoryClicked}
-              />
+            <Routes>
+              <Route path='/' element={<Home 
+                                        currentItems={currentItems}
+                                        currentCategory={currentCategory}
+                                        setCurrentCategory={setCurrentCategory}
+                                        categoryClicked={categoryClicked}
+                                      />}
+                />
+
+            <Route path='/:id' element={<ProductView 
+                                          data={data}
+                                        />} 
+                />
+            
+            </Routes>
+            
           </div>
           
         </main>
