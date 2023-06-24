@@ -4,7 +4,10 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 
 
 Video:
-<div style="position: relative; padding-bottom: NaN%; height: 0;"><iframe src="https://www.loom.com/embed/6ba53d249c134fb3bc04f769ca91c39e?sid=2c531084-577a-482f-8adc-b245f43ead60" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<a href="https://www.loom.com/share/6ba53d249c134fb3bc04f769ca91c39e">
+    <p>Student Store - 23 June 2023 - Watch Video</p>
+    <img style="max-width:300px;" src="null">
+  </a>
 
 Check out our [deployed Student Store](https://codepath-student-store-demo.surge.sh/) for reference! Explore the exemplar by trying the following tasks:
 
