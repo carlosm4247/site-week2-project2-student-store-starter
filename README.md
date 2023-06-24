@@ -2,13 +2,6 @@
 
 Selling merchandise in the modern era requires digital solutions. For this project, you'll be tasked with designing and constructing an online student store for the College of CodePath. The web app consists of a frontend user interface for potential customers to browse available goods and a backend API to handle data management. The API will be built with Node and Express, and the UI will be built with React.
 
-
-Video:
-<a href="https://www.loom.com/share/6ba53d249c134fb3bc04f769ca91c39e">
-    <p>Student Store - 23 June 2023 - Watch Video</p>
-    <img style="max-width:300px;" src="null">
-  </a>
-
 Check out our [deployed Student Store](https://codepath-student-store-demo.surge.sh/) for reference! Explore the exemplar by trying the following tasks:
 
 - Click on the different categories (clothing, food, etc.) to filter the list of products.
@@ -34,6 +27,12 @@ Check out our [deployed Student Store](https://codepath-student-store-demo.surge
 - [ ] Users can click the '-' button on a product cart to decrement that product in the shopping cart.
 - [ ] The shopping cart displays a table of products, quantities, subtotal, tax, and total.
 - [ ] Your choice! (Replace this bullet explaining what you implemented. Example: Users can leave ratings for products they have purchased.)
+
+Video:
+<a href="https://www.loom.com/share/6ba53d249c134fb3bc04f769ca91c39e">
+<p>Student Store - 23 June 2023 - Watch Video</p>
+<img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/6ba53d249c134fb3bc04f769ca91c39e-with-play.gif">
+</a>
 
 ## *Week 3* Application Features
 
