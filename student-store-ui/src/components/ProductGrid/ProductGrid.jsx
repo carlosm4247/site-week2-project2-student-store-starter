@@ -3,7 +3,7 @@ import "./ProductGrid.css"
 import { Dataset } from "../../../../student-store-express-api/data/dataset"
 import ProductCard from "../ProductCard/ProductCard"
 
-export default function ProductGrid({currentItems}) {
+export default function ProductGrid({currentItems, addToCart, removeFromCart}) {
 
   const data = Dataset.createDataSet();
 
@@ -17,6 +17,8 @@ export default function ProductGrid({currentItems}) {
             image={item.image}
             name={item.name}
             price={item.price}
+            addToCart={addToCart}
+            removeFromCart={removeFromCart}
           />
         ))
       ) : (

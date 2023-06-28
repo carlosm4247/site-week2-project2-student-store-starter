@@ -8,7 +8,7 @@ import SearchForm from "../SearchForm/SearchForm";
 
 
 
-export default function Home({currentItems, currentCategory, categoryClicked, searchString, setSearchString, runSearchButton}) {
+export default function Home({currentItems, currentCategory, categoryClicked, searchString, setSearchString, runSearchButton, addToCart, removeFromCart}) {
   
   
   return (
@@ -39,6 +39,8 @@ export default function Home({currentItems, currentCategory, categoryClicked, se
       
       <ProductGrid 
         currentItems={currentItems}
+        addToCart={addToCart}
+        removeFromCart={removeFromCart}
       />
       
       <About />

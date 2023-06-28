@@ -18,6 +18,7 @@ export default function App() {
   const [currentItems, setCurrentItems] = useState([]);
   const [currentCategory, setCurrentCategory] = useState("");
   const [sidebarClassName, setSidebarClassName] = useState("");
+  const [cartedItems, setCartedItems] = useState({});
 
   
 
@@ -49,6 +50,30 @@ export default function App() {
   function closeSidebar() {
     console.log("Sidebar closed")
     setSidebarClassName("sidebarCont")
+  }
+
+  function addToCart(id) {
+    if (cartedItems[id]) {
+      cartedItems[id] += 1;
+    }
+    else {
+      cartedItems[id] = 1;
+    }
+
+    setCartedItems(cartedItems);
+    console.log(cartedItems);
+  }
+
+  function removeFromCart(id) {
+    if (cartedItems[id] === 1) {
+      delete cartedItems[id]
+    }
+    else if (cartedItems[id]) {
+      cartedItems[id] -= 1;
+    }
+
+    setCartedItems(cartedItems);
+    console.log(cartedItems);
   }
 
   useEffect(() => {
@@ -92,6 +117,8 @@ export default function App() {
                                         searchString={searchString}
                                         setSearchString={setSearchString}
                                         runSearchButton={runSearchButton}
+                                        addToCart={addToCart}
+                                        removeFromCart={removeFromCart}
                                       />}
                 />
 
