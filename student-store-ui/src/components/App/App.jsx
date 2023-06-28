@@ -17,6 +17,9 @@ export default function App() {
   const [homeItems, setHomeItems] = useState([])
   const [currentItems, setCurrentItems] = useState([]);
   const [currentCategory, setCurrentCategory] = useState("");
+  const [sidebarClassName, setSidebarClassName] = useState("");
+
+  
 
   function runSearchButton() {
     console.log(`Running search for ${searchString}`);
@@ -38,11 +41,22 @@ export default function App() {
     setCurrentCategory(category);
   }
 
+  function openSidebar() {
+    console.log("Sidebar opened");
+    setSidebarClassName("sidebar open");
+  }
+
+  function closeSidebar() {
+    console.log("Sidebar closed")
+    setSidebarClassName("sidebar")
+  }
+
   useEffect(() => {
     const items = data.products;
     setCurrentItems(items);
     setHomeItems(items);
     setCurrentCategory("All Categories");
+    setSidebarClassName("sidebar");
   }, []);
 
 
@@ -52,8 +66,12 @@ export default function App() {
         <main>
           {/* YOUR CODE HERE! */}
 
-          <div className="sidebar">
-            <Sidebar />
+          <div className={sidebarClassName}>
+            <Sidebar 
+              openSidebar={openSidebar}
+              closeSidebar={closeSidebar}
+              sidebarClassName={sidebarClassName}
+            />
           </div>
           
           <div className="page">
