@@ -22,7 +22,7 @@
   flex-direction: column;
 }
 
-.app .sidebar {
+.app .sidebarCont {
   width: 4%;
   background-color: #2C4047;
   position: fixed;
@@ -32,7 +32,7 @@
   border-right: solid 1px white;
 }
 
-.app .sidebar.open {
+.app .sidebarCont.open {
   width: 38%;
   z-index: 10;
 }

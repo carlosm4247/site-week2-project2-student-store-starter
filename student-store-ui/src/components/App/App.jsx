@@ -43,12 +43,12 @@ export default function App() {
 
   function openSidebar() {
     console.log("Sidebar opened");
-    setSidebarClassName("sidebar open");
+    setSidebarClassName("sidebarCont open");
   }
 
   function closeSidebar() {
     console.log("Sidebar closed")
-    setSidebarClassName("sidebar")
+    setSidebarClassName("sidebarCont")
   }
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export default function App() {
     setCurrentItems(items);
     setHomeItems(items);
     setCurrentCategory("All Categories");
-    setSidebarClassName("sidebar");
+    setSidebarClassName("sidebarCont");
   }, []);
 
 
