@@ -19,6 +19,8 @@ export default function App() {
   const [currentCategory, setCurrentCategory] = useState("");
   const [sidebarClassName, setSidebarClassName] = useState("");
   const [cartedItems, setCartedItems] = useState({});
+  const [total, setTotal] = useState(0.0);
+  const [tax, setTax] = useState(0.0);
 
   
 
@@ -60,11 +62,23 @@ export default function App() {
       cartedItems[id] = 1;
     }
 
+    const item = data.products.find(item => item.id == id);
+
+    setTax(tax + (item.price * 0.0725))
+    setTotal(total + item.price + (item.price * 0.0725))
     setCartedItems(cartedItems);
     console.log(cartedItems);
   }
 
   function removeFromCart(id) {
+
+    const item = data.products.find(item => item.id == id);
+
+    if (cartedItems[id]) {
+      setTax(tax - (item.price * 0.0725))
+      setTotal(total - item.price - (item.price * 0.0725))
+    }
+    
     if (cartedItems[id] === 1) {
       delete cartedItems[id]
     }
@@ -74,6 +88,20 @@ export default function App() {
 
     setCartedItems(cartedItems);
     console.log(cartedItems);
+  }
+
+  function displayCartedItem(id) {
+    const item = data.products.find(item => item.id == id);
+
+    const name = item.name
+    const quantity = cartedItems[id]
+    const subtotal = (item.price * quantity).toFixed(2)
+    const tax = (subtotal * 0.0725).toFixed(2)
+    const total = (Number(subtotal) + Number(tax)).toFixed(2)
+
+    const item_details = [name, quantity, subtotal]
+
+    return item_details.join(" ")
   }
 
   useEffect(() => {
@@ -96,6 +124,10 @@ export default function App() {
               openSidebar={openSidebar}
               closeSidebar={closeSidebar}
               sidebarClassName={sidebarClassName}
+              cartedItems={cartedItems}
+              displayCartedItem={displayCartedItem}
+              total={total}
+              tax={tax}
             />
           </div>
           
