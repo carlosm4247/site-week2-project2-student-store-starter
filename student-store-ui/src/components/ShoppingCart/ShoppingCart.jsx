@@ -14,7 +14,7 @@ export default function ShoppingCart({cartedItems, displayCartedItem, tax, total
 
             {Object.keys(cartedItems).map( (id) => 
             (<div key={id}>
-              {displayCartedItem(id)}
+              {displayCartedItem(id).join(" ")}
             </div>))}
 
             <div>{tax.toFixed(2)}</div>

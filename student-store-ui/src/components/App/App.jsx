@@ -22,6 +22,11 @@ export default function App() {
   const [total, setTotal] = useState(0.0);
   const [tax, setTax] = useState(0.0);
 
+
+  function clearCart() {
+    setCartedItems({})
+  }
+
   
 
   function runSearchButton() {
@@ -101,7 +106,7 @@ export default function App() {
 
     const item_details = [name, quantity, subtotal]
 
-    return item_details.join(" ")
+    return item_details
   }
 
   useEffect(() => {
@@ -128,6 +133,9 @@ export default function App() {
               displayCartedItem={displayCartedItem}
               total={total}
               tax={tax}
+              setTotal={setTotal}
+              setTax={setTax}
+              clearCart={clearCart}
             />
           </div>
           

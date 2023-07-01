@@ -3,7 +3,7 @@ import "./Sidebar.css"
 import ShoppingCart from "../ShoppingCart/ShoppingCart"
 import CheckoutForm from "../CheckoutForm/CheckoutForm"
 
-export default function Sidebar({openSidebar, sidebarClassName, closeSidebar, cartedItems, displayCartedItem, tax, total}) {
+export default function Sidebar({openSidebar, sidebarClassName, closeSidebar, cartedItems, displayCartedItem, tax, total, clearCart, setTotal, setTax}) {
 
   return (
     <div className="sidebar">
@@ -17,7 +17,15 @@ export default function Sidebar({openSidebar, sidebarClassName, closeSidebar, ca
                 tax={tax}
                 total={total}
               />
-              <CheckoutForm />
+              <CheckoutForm 
+                cartedItems={cartedItems}
+                displayCartedItem={displayCartedItem}
+                tax={tax}
+                total={total}
+                clearCart={clearCart}
+                setTotal={setTotal}
+                setTax={setTax}
+              />
             </div>
             )}
     </div>
