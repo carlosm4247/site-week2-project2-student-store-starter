@@ -4,3 +4,23 @@
     color: white;
     max-width: 800px;
 }
+
+.shoppingCart table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+  }
+  
+  .shoppingCart th,
+  .shoppingCart td,
+  .shoppingCart div {
+    padding: 8px;
+    text-align: left;
+    border-bottom: solid 1px #ddd;
+    background-color: #f2f2f2;
+  }
+
+  .shoppingCart div {
+    display: flex;
+    justify-content: space-around;
+  }
